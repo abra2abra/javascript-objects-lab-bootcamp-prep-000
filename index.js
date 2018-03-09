@@ -10,8 +10,8 @@ function destructivelyUpdateObjectWithKeyAndValue(obj, key, value){
 }
 
 function deleteFromObjectByKey(object, key){
-  console.log(Object.assign({}, object, object[key]));
- 
+  var jj = Object.assign({}, object);
+ delete jj[key];
   return object;
 }
 var playground = {ha: 'one', haha: 'two'};
